@@ -1,7 +1,7 @@
 import time
 from tqdm import tqdm
 
-filename = "wu-tang-no-tags.txt"
+filename = "wu-tang.txt"
 profanity_file = "profanity_list.txt"
 
 
@@ -34,5 +34,5 @@ with open(filename, "r") as file:
 
         content += x
 
-with open("wu-tang-no-tags-no-profanity.txt", "w") as file:
+with open("wu-tang-no-profanity.txt", "w") as file:
     file.write(content)

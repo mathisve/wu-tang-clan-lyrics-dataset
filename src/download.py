@@ -24,7 +24,16 @@ for i in list.find_all("a"):
 
 print("Amount of songs:", len(song_urls))
 
-os.mkdir("scrapes")
+# this website is very finnicky about webscrapers.
+# I was able to scrape the first 127 songs in one go
+# If you reverse song_url, you get the last 127 songs
+# alternatively you could shuffle the array.
+song_urls.reverse()
+
+try:
+    os.mkdir("scrapes")
+except FileExistsError:
+    pass
 
 for link in tqdm(song_urls):
     # print(link)
