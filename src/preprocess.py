@@ -9,6 +9,7 @@ for file in os.listdir("scrapes"):
         prev = True
         while True:
             x = file.readline()
+            x = x.lower()
             if not x:
                 break
 
@@ -27,5 +28,5 @@ for file in os.listdir("scrapes"):
             prev = False
 
 
-with open("wu-tang.txt", "w") as file:
+with open("wu-tang-no-tags.txt", "w") as file:
     file.write(content.rstrip())
